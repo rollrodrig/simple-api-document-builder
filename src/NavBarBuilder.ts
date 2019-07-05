@@ -3,7 +3,7 @@ class NavBarBuilder {
         let href = item.replace(".json", "").replace(/_/g, "-");
         let name = href.replace(/-/g, " ");
         return {
-            href: href,
+            href: href+".html",
             name: name,
         }
     }
@@ -11,7 +11,7 @@ class NavBarBuilder {
         let html:string = `<li><a href="">Api</a></li>`;
         items.map((item:string)=>{
             let name  = NavBarBuilder.cleanName(item);
-            html +=`<li><a href="${name.href}.html">${name.name}</a></li>`;
+            html +=`<li><a href="${name.href}">${name.name}</a></li>`;
         });
         return html;
     }

@@ -11,7 +11,7 @@
             <div class="fy-fx2 sdbar">
                 <div class="fy-bx">
                     <div class="fy-mb5 fy-txac">
-                        <div id="api_title">
+                        <div id="doctitle">
                             Document v1.0
                         </div>
                         <div id="company" class="fy-txs">
@@ -40,9 +40,9 @@
                     </div>
                     <hr class="fy-hr">
                     <h2 id="eppath">
-                        POST <span>/api/1/vehicles/{id}/command/set_valet_mode</span> 
+                        <span class="epm">post</span>&nbsp;&nbsp;<span class="ep">/api/1/vehicles/{id}/command/set_valet_mode</span> 
                     </h2>
-                    <p class="eppathdesc">
+                    <p class="eppathinfo">
                         Activates or deactivates Valet Mode.
                     </p>
                     <div class="fy-mb2">
@@ -72,7 +72,20 @@
                     </div>
                     <div class="fy-mb2">
                         <h3>
-                            Request example
+                            Header
+                        </h3>
+                        <div id="ephed">
+                                <pre><code class="json">
+                                        {
+                                            "authorization": "abc123",
+                                            "token": "token68655"
+                                        }
+                                </code></pre>
+                        </div>
+                    </div>
+                    <div class="fy-mb2">
+                        <h3>
+                            Body
                         </h3>
                         <div id="epreq">
                                 <pre><code class="json">

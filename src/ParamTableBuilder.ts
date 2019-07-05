@@ -1,24 +1,5 @@
 import cheerio from 'cheerio';
-
-// <table class="fy-tbl -s">
-// <tbody><tr>
-//     <th>Paramenters</th>
-//     <th>Example</th>
-//     <th>Description</th>
-// </tr>
-// <tr>
-//     <td>on</td>
-//     <td>true</td>
-//     <td>true to activate, false to deactivate. Must include previous PIN if deactivating.</td>
-// </tr>
-// <tr>
-//     <td>password</td>
-//     <td>1234</td>
-//     <td>A PIN to deactivate Valet Mode. Can be blank if activating with a previous PIN.</td>
-// </tr>
-// </tbody>
-// </table>
-interface TParam {
+export interface TParam {
     param:string, 
     example:string, 
     description:string
