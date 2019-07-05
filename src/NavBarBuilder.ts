@@ -1,4 +1,3 @@
-import cheerio from 'cheerio';
 class NavBarBuilder {
     static cleanName(item:string){
         let href = item.replace(".json", "").replace(/_/g, "-");
