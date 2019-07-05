@@ -16,7 +16,7 @@
             "description":"true to activate, false to deactivate. Must include previous PIN if deactivating."
         }
     ],
-    "request":{
+    "body":{
         "on": true,
         "password": "768655"
     },

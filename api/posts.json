@@ -20,7 +20,7 @@
         "authorization": "auth123token",
         "token": "tokenabc123"
     },
-    "request":{
+    "body":{
         "userid": "userid123",
         "qty":2
     },

@@ -10,28 +10,44 @@ import CreateHtml from './CreateHtml';
 import ParamTableBuilder from './ParamTableBuilder';
 import CodeBuilder from './CodeBuilder';
 import EndPointPath from './EndPointPath';
+import RemoveFiles from './RemoveFiles';
+import CreatePublic from './CreatePublic';
 describe('ApiBuilder: ', () => {
     it('test create file', async () => {
-        let $ = await HtmlTemplate.create();
         let files = await ReadJsonFiles.read('api');
         let navbar = await NavBarBuilder.create(files);
-        let filecontent: TJsonContent = await ReadJsonContent.read('api/' + files[0]);
-        let endpoint = EndPointPath.create(filecontent.method, filecontent.path)
-        let paramsTable  = ParamTableBuilder.create(filecontent.parameters);
-        let fileinfo = NavBarBuilder.cleanName(files[0]);
-        let header = CodeBuilder.create(filecontent.header);
-        let request = CodeBuilder.create(filecontent.request);
-        let response = CodeBuilder.create(filecontent.response);
-        $('#sbmen').html(navbar);
-        $('#eptitle').html(filecontent.title);
-        $('#epdesc').html(`<p>${filecontent.description}</p>`);
-        $('#eppath').html(endpoint);
-        $('#eppathinfo').html(filecontent.path_info);
-        $('#epparams').html(paramsTable);
-        $('#ephed').html(header);
-        $('#epreq').html(request);
-        $('#epres').html(response);
-        await CreateHtml.create(`public/${fileinfo.href}`, $.html());
+        // await RemoveFiles.remove();
+        // await CreatePublic.create();
+        // for (let i = 0; i < files.length; i++) {
+        //     let currentFile = files[i];
+        //     let fileinfo = NavBarBuilder.cleanName(currentFile);
+        //     let filecontent: TJsonContent = await ReadJsonContent.read(`api/${currentFile}`);
+            
+        //     let $ = await HtmlTemplate.create();
+        //     $('#sbmen').html(navbar);
+
+        //     $('#eptitle').html(filecontent.title);
+        //     $('#epdesc').html(`<p>${filecontent.description}</p>`);
+
+        //     let endpoint = EndPointPath.create(filecontent.method, filecontent.path);
+        //     $('#eppath').html(endpoint);
+        //     $('#eppathinfo').html(filecontent.path_info);
+
+        //     let paramsTable = ParamTableBuilder.create(filecontent.parameters);
+        //     $('#epparams').html(paramsTable);
+
+        //     let header = CodeBuilder.create(filecontent.header);
+        //     $('#ephed').html(header);
+
+        //     let body = CodeBuilder.create(filecontent.body);
+        //     $('#epbdy').html(body);
+            
+        //     let response = CodeBuilder.create(filecontent.response);
+        //     $('#epres').html(response);
+            
+        //     await CreateHtml.create(`public/${fileinfo.href}`, $.html());
+        // }
+
     });
 });
 

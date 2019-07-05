@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "mocha": "mocha  --watch --watch-extensions ts --require ts-node/register \"./src/**/*.spec.ts\""
+    "mocha": "mocha  --watch --watch-extensions ts --require ts-node/register \"./src/**/*.spec.ts\"",
+    "mochaf": "mocha  --watch --watch-extensions ts --require ts-node/register \"./src/${FILE}.spec.ts\""
   },
   "keywords": [],
   "author": "",
@@ -18,7 +19,9 @@
     "fs-promise": "^2.0.3",
     "json-beautify": "^1.1.0",
     "lodash": "^4.17.11",
+    "ncp": "^2.0.0",
     "prettify-json": "^1.0.0",
+    "rimraf": "^2.6.3",
     "uuid": "^3.3.2"
   },
   "devDependencies": {

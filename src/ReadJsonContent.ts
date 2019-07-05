@@ -8,7 +8,7 @@ export interface TJsonContent {
     path_info:string,
     parameters: TParam[],
     header:any,
-    request:any,
+    body:any,
     response:any,
 }
 class ReadJsonContent {
