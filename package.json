@@ -1,0 +1,39 @@
+{
+  "name": "apibuilder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "mocha": "mocha  --watch --watch-extensions ts --require ts-node/register \"./src/**/*.spec.ts\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/fs-promise": "^1.0.3",
+    "cheerio": "^1.0.0-rc.3",
+    "faker": "^4.1.0",
+    "fs-promise": "^2.0.3",
+    "lodash": "^4.17.11",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/chai-as-promised": "^7.1.0",
+    "@types/faker": "^4.1.5",
+    "@types/lodash": "^4.14.123",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.13.13",
+    "@types/uuid": "^3.4.4",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^6.0.2",
+    "nodemon": "^1.18.10",
+    "ts-node": "^8.0.3",
+    "ts-node-dev": "^1.0.0-pre.39",
+    "tslint": "^5.14.0",
+    "typescript": "^3.3.4000"
+  }
+}
