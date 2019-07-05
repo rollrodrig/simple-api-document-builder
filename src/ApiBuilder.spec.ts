@@ -12,12 +12,14 @@ import CodeBuilder from './CodeBuilder';
 import EndPointPath from './EndPointPath';
 import RemoveFiles from './RemoveFiles';
 import CreatePublic from './CreatePublic';
+import CopyFiles from './CopyFiles';
 describe('ApiBuilder: ', () => {
     it('test create file', async () => {
         let files = await ReadJsonFiles.read('api');
         let navbar = await NavBarBuilder.create(files);
-        // await RemoveFiles.remove();
-        // await CreatePublic.create();
+        await RemoveFiles.remove();
+        await CreatePublic.create();
+        await CopyFiles.copy();
         // for (let i = 0; i < files.length; i++) {
         //     let currentFile = files[i];
         //     let fileinfo = NavBarBuilder.cleanName(currentFile);
