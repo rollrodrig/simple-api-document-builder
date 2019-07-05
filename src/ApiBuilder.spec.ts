@@ -24,7 +24,7 @@ describe('ApiBuilder: ', () => {
         let response = CodeBuilder.create(filecontent.response);
         $('#sbmen').html(navbar);
         $('#eptitle').html(filecontent.title);
-        $('#epdesc').html(filecontent.description);
+        $('#epdesc').html(`<p>${filecontent.description}</p>`);
         $('#eppath').html(endpoint);
         $('#eppathinfo').html(filecontent.path_info);
         $('#epparams').html(paramsTable);
@@ -32,7 +32,6 @@ describe('ApiBuilder: ', () => {
         $('#epreq').html(request);
         $('#epres').html(response);
         await CreateHtml.create(`public/${fileinfo.href}`, $.html());
-        console.log($.html());
     });
 });
 

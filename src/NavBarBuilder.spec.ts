@@ -3,9 +3,9 @@ import NavBarBuilder from './NavBarBuilder';
 describe('NavBarBuilder: ', () => {
 	it('.cleanName', async () => {
         expect(NavBarBuilder.cleanName("my-name.json"))
-            .to.deep.eq({href:"my-name",name:"my name"});
+            .to.deep.eq({href:"my-name.html",name:"my name"});
         expect(NavBarBuilder.cleanName("my_name_is-very_long.json"))
-            .to.deep.eq({href:"my-name-is-very-long",name:"my name is very long"});
+            .to.deep.eq({href:"my-name-is-very-long.html",name:"my name is very long"});
     });
     it('.create', async () => {
         let items = ['user_api.json','post-name_all.json','comments.json'];
