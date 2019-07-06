@@ -19,9 +19,9 @@ class ParamTableBuilder {
         params.map((p) => {
             html += `
                         <tr>
-                            <td>${p.param}</td>
-                            <td>${p.example}</td>
-                            <td>${p.description}</td>
+                            <td><code>${p[0]}</code></td>
+                            <td><code>${p[1]}</code></td>
+                            <td>${p[2]}</td>
                         </tr>
                     `;
         });

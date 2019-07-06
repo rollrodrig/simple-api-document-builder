@@ -18,9 +18,15 @@ class ReadJsonFiles {
             fs_1.default.readdir(path, 'utf8', (err, files) => {
                 if (err)
                     throw err;
-                resolve(files);
+                let f = files.filter((f) => /(.)+(\.json)$/.test(f));
+                resolve(f);
             });
         }));
     }
 }
 exports.default = ReadJsonFiles;
+// for( var i = 0; i < files.length; i++){ 
+//     if(/(.)+(\.json)$/.test(files[i]) === false) {
+//         files.splice(i, 1); 
+//     }
+// }

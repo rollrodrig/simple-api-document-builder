@@ -13,6 +13,7 @@ import CreateIndex from './CreateIndex';
 import FileInfo, { TFileInfo } from './FileInfo';
 import IndexList from './IndexList';
 import IndexListWrapper from './IndexListWrapper';
+import ValidateJsonContent from './ValidateJsonContent';
 class ApiBuilder {
     files;
     navbar;
@@ -43,6 +44,8 @@ class ApiBuilder {
     }
     async fileInfo(currentFile){
         this.fileinfo = FileInfo.get(currentFile);
+    }
+    async jsonFileContent(currentFile) {
         this.filecontent = await ReadJsonContent.read(`api/${currentFile}`);
     }
     async creatApiView(){
@@ -102,6 +105,8 @@ class ApiBuilder {
             let currentFile = this.files[i];
             console.log(chalk.blue(`Building ${currentFile}...`));
             await this.fileInfo(currentFile);
+            await this.jsonFileContent(currentFile);
+            ValidateJsonContent.eval(currentFile, this.filecontent);
             await this.creteTemplate();
             this.htmlNavBar();
             this.htmlApiDetail();

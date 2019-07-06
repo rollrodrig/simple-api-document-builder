@@ -26,6 +26,7 @@ const CreateIndex_1 = __importDefault(require("./CreateIndex"));
 const FileInfo_1 = __importDefault(require("./FileInfo"));
 const IndexList_1 = __importDefault(require("./IndexList"));
 const IndexListWrapper_1 = __importDefault(require("./IndexListWrapper"));
+const ValidateJsonContent_1 = __importDefault(require("./ValidateJsonContent"));
 class ApiBuilder {
     constructor() {
         this.indexTableList = "";
@@ -63,6 +64,10 @@ class ApiBuilder {
     fileInfo(currentFile) {
         return __awaiter(this, void 0, void 0, function* () {
             this.fileinfo = FileInfo_1.default.get(currentFile);
+        });
+    }
+    jsonFileContent(currentFile) {
+        return __awaiter(this, void 0, void 0, function* () {
             this.filecontent = yield ReadJsonContent_1.default.read(`api/${currentFile}`);
         });
     }
@@ -124,10 +129,16 @@ class ApiBuilder {
     build() {
         return __awaiter(this, void 0, void 0, function* () {
             let l = this.files.length;
+            if (l <= 0 || l === undefined || l === null) {
+                console.log(chalk_1.default.red(`No json files found on /api/ folder...`));
+                return;
+            }
             for (let i = 0; i < l; i++) {
                 let currentFile = this.files[i];
                 console.log(chalk_1.default.blue(`Building ${currentFile}...`));
                 yield this.fileInfo(currentFile);
+                yield this.jsonFileContent(currentFile);
+                ValidateJsonContent_1.default.eval(currentFile, this.filecontent);
                 yield this.creteTemplate();
                 this.htmlNavBar();
                 this.htmlApiDetail();
