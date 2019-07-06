@@ -43,6 +43,7 @@ Run the command
 npm run build
 ```
 and open the folder `public`, the `user.html` will be created.
+![Html generated screenshot example](example.png?raw=true "Html generated screenshot example")
 
 ## 3. Open on browser
 The genered result is pure html files, just open it on browser or public it on S3 for your team.
