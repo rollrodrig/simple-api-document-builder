@@ -1,11 +1,18 @@
 import { expect, assert } from 'chai';
-import fs from 'fs-promise';
 import ApiBuilder from './ApiBuilder';
-import cheerio from 'cheerio';
-import ReadJsonFiles from './ReadJsonFiles';
 describe('ApiBuilder: ', () => {
-	it('test create file', async () => {
-        let files = await ReadJsonFiles.read('api');
+    it('test create file', async () => {
+
+    });
+});
+
+
+// let file = files[0];
+        // console.log(file);
+        // let obj = await ReadJsonContent.read(file);
+        // let rawdata = fs.readFile('api/user.json');
+        // //@ts-ignore  
+        // let student = JSON.parse(rawdata);
 
         // let files = await fs.readdir('api')
         // console.log(files);
@@ -28,8 +35,7 @@ describe('ApiBuilder: ', () => {
         //         if (err) throw err;
         //     });
         // });
-    });
-});
+
 // let ab = new ApiBuilder();
 // fs.writeFile("../public/hi.html", "Hey there!", function(err) {
 //     if(err) { return console.log(err); }

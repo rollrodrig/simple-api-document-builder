@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="static/css/fly.css">
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="stylesheet" href="static/css/atom-one-light.css">
+    </head>
+    <body>
+        <div class="fy-bx">
+            <h1 id="eptitle">
+                    API document
+            </h1>
+            <hr class="fy-hr">
+            <div id="epparams_" class="fy-mb2">
+                <h3>
+                    Routes
+                </h3>
+                <div id="apiroutes">
+                    <table class="fy-tbl -s">
+                            <tbody><tr>
+                                <th>Name</th>
+                                <th>Path</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td><a href="">posts</a></td>
+                                <td><a href="">/api/v1/posts</a></td>
+                                <td>true to activate, false to deactivate. Must include previous PIN if deactivating.</td>
+                            </tr>
+                            <tr>
+                                <td><a href="">users</a></td>
+                                <td><a href="">/api/v1/users</a></td>
+                                <td>A PIN to deactivate Valet Mode. Can be blank if activating with a previous PIN.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="static/js/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>
