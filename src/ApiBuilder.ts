@@ -8,7 +8,6 @@ import ParamTableBuilder from './ParamTableBuilder';
 import CodeBuilder from './CodeBuilder';
 import EndPointPath from './EndPointPath';
 import RemoveFiles from './RemoveFiles';
-import CreatePublic from './CreatePublic';
 import CopyFiles from './CopyFiles';
 import chalk from 'chalk';
 import CreateIndex from './CreateIndex';
@@ -88,9 +87,9 @@ class ApiBuilder {
         let response = CodeBuilder.create(this.filecontent.response);
         this._html_('#epres').html(response);
     }
+    indexTableList: string = "";
     async build(){
         let l = this.files.length;
-        let indexTableList: string;
         for (let i = 0; i < l; i++) {
             let currentFile = this.files[i];
             console.log(chalk.blue(`Building ${currentFile}...`));
@@ -103,11 +102,11 @@ class ApiBuilder {
             this.htmlHeader();
             this.htmlBody();
             this.htmlResponse();
-            indexTableList += IndexList.add(this.fileinfo, this.filecontent);
+            this.indexTableList += IndexList.add(this.fileinfo, this.filecontent);
             await this.creatHtml();
             console.log(chalk.green(`Page ${this.fileinfo.href} created...`));
         }
-        let indexTableListWrapped = IndexListWrapper.wrap(indexTableList);
+        let indexTableListWrapped = IndexListWrapper.wrap(this.indexTableList);
         this._index_('#apiroutes').html(indexTableListWrapped);
         await CreateHtml.create(`public/index.html`, this._index_.html());
     }
