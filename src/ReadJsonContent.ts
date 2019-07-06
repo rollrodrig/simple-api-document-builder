@@ -2,14 +2,15 @@ import fs from "fs";
 import { TParam } from './ParamTableBuilder';
 export interface TJsonContent {
     title:string,
-    description:string,
+    description?:string,
     method:string,
     path:string,
-    path_info:string,
-    parameters: TParam[],
-    header:any,
+    path_info?:string,
+    parameters?: TParam[],
+    header?:any,
     body:any,
     response:any,
+    error?:any,
 }
 class ReadJsonContent {
     static read(path:string):Promise<TJsonContent> {

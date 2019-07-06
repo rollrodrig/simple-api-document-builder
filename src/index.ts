@@ -1,2 +1,3 @@
 import ApiBuilder from './ApiBuilder';
-ApiBuilder.run();
+let ab = new ApiBuilder();
+    ab.run();

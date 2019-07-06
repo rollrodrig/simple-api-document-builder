@@ -10,7 +10,9 @@
                 <div class="fy-bx">
                     <div class="fy-mb5 fy-txac">
                         <div id="doctitle">
-                            Document v1.0
+                            <a href="index.html">
+                                Document v1.0
+                            </a>
                         </div>
                         <div id="company" class="fy-txs">
                             FACTTORIAL
@@ -18,30 +20,28 @@
                     </div>
                     <ul id="sbmen" class="fy-nv -h">
                         <li><a href="">Api</a></li>
-                        <li><a href="installation.html">Installation</a></li>
-                        <li><a href="breakpoints.html">Breakpoints</a></li>
-                        <li><a href="modifier.html">Modifier</a></li>
-                        <li><a href="css-names.html">Css names</a></li>
+                        <li><a href="posts.html">posts</a></li>
+                        <li><a href="comments.html">comments</a></li>
                     </ul>
                 </div>
             </div>
             <div class="fy-fxg ">
                 <div class="fy-bx">
                     <h1 id="eptitle">
-                            Valet Mode
+                            Get all post comments
                     </h1>
                     <hr class="fy-hr">
                     <div id="epdesc">
                         <p>
-                            Valet Mode limits the car's top speed to 70MPH and 80kW of acceleration power. It also disables Homelink, Bluetooth and Wifi settings, and the ability to disable mobile access to the car. It also hides your favorites, home, and work locations in navigation.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum id diam venenatis efficitur. Curabitur pellentesque aliquam neque vitae molestie. Pellentesque vel ornare lorem, in porta ex. Duis rutrum ut quam in sodales. Etiam magna risus, posuere ut scelerisque in, bibendum eu leo. Curabitur sed libero sed mi varius aliquam vitae a erat.
                         </p>
                     </div>
                     <hr class="fy-hr">
                     <h2 id="eppath">
-                        <span class="epm">post</span>&nbsp;&nbsp;<span class="ep">/api/1/vehicles/{id}/command/set_valet_mode</span> 
+                        <span class="epm">post</span>&nbsp;&nbsp;<span class="ep">/api/v1/comments</span> 
                     </h2>
                     <p id="eppathinfo">
-                        Activates or deactivates Valet Mode.
+                            Cras auctor sem in gravida mollis. Proin vitae finibus massa. Morbi rhoncus suscipit lacus, eu finibus lacus finibus vestibulum.
                     </p>
                     <hr class="fy-hr">
                     <div id="epparams_" class="fy-mb2">
@@ -56,14 +56,14 @@
                                         <th>Description</th>
                                     </tr>
                                     <tr>
-                                        <td>on</td>
-                                        <td>true</td>
-                                        <td>true to activate, false to deactivate. Must include previous PIN if deactivating.</td>
+                                        <td>post_id</td>
+                                        <td>"1e810c..."</td>
+                                        <td>Praesent tincidunt erat in nisi mattis, sed pharetra ipsum mattis. </td>
                                     </tr>
                                     <tr>
-                                        <td>password</td>
-                                        <td>1234</td>
-                                        <td>A PIN to deactivate Valet Mode. Can be blank if activating with a previous PIN.</td>
+                                        <td>qty</td>
+                                        <td>3</td>
+                                        <td>Cras quis elementum justo, in vestibulum tortor. Donec tincidunt odio sed enim ultricies</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -77,7 +77,6 @@
                                 <pre><code class="json">
                                         {
                                             "authorization": "abc123",
-                                            "token": "token68655"
                                         }
                                 </code></pre>
                         </div>
@@ -89,8 +88,8 @@
                         <div id="epbdy">
                                 <pre><code class="json">
                                         {
-                                            "on": true,
-                                            "password": "768655"
+                                            "post_id": "507f191e810c19729de860ea",
+                                            "qty": 3
                                         }
                                 </code></pre>
                         </div>
@@ -103,10 +102,20 @@
                             <pre><code class="json">
                                     {
                                         "success": true,
-                                        "result": {
-                                            "id":"123",
-                                            "name":"roll"
-                                        }
+                                        "result": [
+                                            {
+                                                "id":"posid123",
+                                                "title":"Proin pellentesque velit nulla. Curabitur consequat diam vel"
+                                            },
+                                            {
+                                                "id":"posid123",
+                                                "title":"Nullam accumsan scelerisque risus sed varius."
+                                            },
+                                            {
+                                                "id":"posid123",
+                                                "title":"Nullam accumsan scelerisque risus sed varius."
+                                            }
+                                        ] 
                                     }
                             </code></pre>
                         </div>

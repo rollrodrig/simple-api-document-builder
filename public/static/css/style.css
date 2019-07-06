@@ -15,3 +15,6 @@ h2 span.ep {
     font-weight: normal;
     font-family: 'Roboto Mono', monospace;
 }
+#apiroutes table tr td:first-child {
+    width: 130px;
+}

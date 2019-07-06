@@ -4,4 +4,5 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const ApiBuilder_1 = __importDefault(require("./ApiBuilder"));
-ApiBuilder_1.default.run();
+let ab = new ApiBuilder_1.default();
+ab.run();
