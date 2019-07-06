@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
+    "tsc": "tsc",
     "mocha": "mocha  --watch --watch-extensions ts --require ts-node/register \"./src/**/*.spec.ts\"",
     "mochaf": "mocha  --watch --watch-extensions ts --require ts-node/register \"./src/${FILE}.spec.ts\""
   },
