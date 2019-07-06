@@ -47,3 +47,8 @@ and open the folder `public`, the `user.html` will be created.
 ## 3. Open on browser
 The genered result is pure html files, just open it on browser or public it on S3 for your team.
 
+## Collaborate
+Feel free to collaborate with this project.
+
+## Follow me
+on twitter [@rollrodrig](https://twitter.com/rollrodrig)
