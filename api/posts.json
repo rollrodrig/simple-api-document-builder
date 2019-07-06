@@ -1,6 +1,7 @@
 {
     "title":"All Posts",
     "description":"Aliquam vulputate sem ac lorem scelerisque porta at ut odio. Sed auctor metus in arcu mollis, sed pellentesque urna sodales. ",
+    "method":"post",
     "path":"/api/v1/posts/",
     "path_info":"Suspendisse non aliquet est. Fusce at metus ipsum. Vivamus lobortis neque ",
     "parameters":[

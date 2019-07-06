@@ -26,6 +26,7 @@
     "lodash": "^4.17.11",
     "ncp": "^2.0.0",
     "prettify-json": "^1.0.0",
+    "pretty-error": "^2.1.1",
     "rimraf": "^2.6.3",
     "sinon": "^7.3.2",
     "uuid": "^3.3.2"
