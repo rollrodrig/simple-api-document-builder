@@ -21,3 +21,6 @@ h2 span.ep {
 .sbnavbar li{
     text-transform: capitalize;
 }
+table code {
+    background-color: transparent;
+}

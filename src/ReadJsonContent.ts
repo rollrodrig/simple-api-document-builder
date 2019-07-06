@@ -6,7 +6,7 @@ export interface TJsonContent {
     method:string,
     path:string,
     path_info?:string,
-    parameters?: TParam[],
+    parameters?: string[][],
     header?:any,
     body:any,
     response:any,

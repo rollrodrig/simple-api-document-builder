@@ -3,18 +3,12 @@ import ParamTableBuilder from './ParamTableBuilder';
 describe('ParamTableBuilder: ', () => {
     it('.create', async () => {
         let params =[
-            {
-                param:"on",
-                example:"true|false",
-                description:"true to activate, false to deactivate. Must include previous PIN if deactivating."
-            },
-            {
-                param:"on",
-                example:"123",
-                description:"true to activate, false to deactivate. Must include previous PIN if deactivating."
-            }
+            ["authorization","auth123token","Nulla nunc lorem, auctor non"],
+            ["userid","uuid123","Integer nec scelerisque lorem. Nulla nunc lorem, auctor non"],
+            ["qty","2","Maecenas fermentum turpis laoreet sem maximus venenatis. S"]
         ]
         let html = ParamTableBuilder.create(params);
+        console.log(html);
         assert.isString(html);
     });
 });

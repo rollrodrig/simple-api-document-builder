@@ -5,7 +5,7 @@ export interface TParam {
     description:string
 }
 class ParamTableBuilder {
-    static create(params:TParam[]){
+    static create(params:string[][]){
         let htmlOpen:string = `
             <table class="fy-tbl -s">
                 <tbody>
@@ -20,12 +20,12 @@ class ParamTableBuilder {
             </table>        
             `;
         let html:string = htmlOpen;
-        params.map((p:TParam)=>{
+        params.map((p:string[])=>{
                     html +=`
                         <tr>
-                            <td>${p.param}</td>
-                            <td>${p.example}</td>
-                            <td>${p.description}</td>
+                            <td><code>${p[0]}</code></td>
+                            <td><code>${p[1]}</code></td>
+                            <td>${p[2]}</td>
                         </tr>
                     `;
         });

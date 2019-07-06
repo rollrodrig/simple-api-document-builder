@@ -5,21 +5,9 @@
     "path":"/api/v1/posts/",
     "path_info":"Suspendisse non aliquet est. Fusce at metus ipsum. Vivamus lobortis neque ",
     "parameters":[
-        {
-            "param":"authorization",
-            "example":"auth123token",
-            "description":"Nulla nunc lorem, auctor non "
-        },
-        {
-            "param":"userid",
-            "example":"uuid123",
-            "description":"Integer nec scelerisque lorem. Nulla nunc lorem, auctor non "
-        },
-        {
-            "param":"qty",
-            "example":"2",
-            "description":"Maecenas fermentum turpis laoreet sem maximus venenatis. S"
-        }
+        ["authorization","auth123token","Nulla nunc lorem, auctor non"],
+        ["userid","uuid123","Integer nec scelerisque lorem. Nulla nunc lorem, auctor non"],
+        ["qty","2|all","Maecenas fermentum turpis laoreet sem maximus venenatis. S"]
     ],
     "header":{
         "authorization": "auth123token"

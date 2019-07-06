@@ -5,21 +5,10 @@
     "path":"/api/v1/user/{id}",
     "path_info":"Curabitur sit amet bibendum elit. Nunc ullamcorper auctor felis, vel pulvinar arcu",
     "parameters":[
-        {
-            "param":"authorization",
-            "example":"auth123token",
-            "description":"Nulla nunc lorem, auctor non "
-        },
-        {
-            "param":"email",
-            "example":"albert@gamil.com",
-            "description":"Integer nec scelerisque lorem. Nulla nunc lorem, auctor non "
-        },
-        {
-            "param":"active",
-            "example":"true",
-            "description":"Maecenas fermentum turpis laoreet sem maximus venenatis. S"
-        }
+        ["{id}","4553356","Nulla nunc lorem, auctor non"],
+        ["authorization","auth123token","Nulla nunc lorem, auctor non"],
+        ["email","albert@gamil.com","Integer nec scelerisque lorem. Nulla nunc lorem, auctor non"],
+        ["active","true|false","Maecenas fermentum turpis laoreet sem maximus venenatis."]
     ],
     "header":{
         "authorization": "auth123token"
