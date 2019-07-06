@@ -6,9 +6,9 @@ Document your API in a simple way.
 Create a `user.json` file in the folder `/api/` with the following structure
 ```json
 {
-    "title":"Get User",
+    "title":"User info",
     "description":"Etiam vel...",
-    "method":"get",
+    "method":"post",
     "path":"/api/v1/user/{id}",
     "path_info":"Curabitur...",
     "parameters":[
