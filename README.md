@@ -7,20 +7,20 @@ Create a `user.json` file in the folder `/api/` with the following structure
 ```json
 {
     "title":"Get User",
-    "description":"Etiam vel...", // optional
+    "description":"Etiam vel...",
     "method":"get",
     "path":"/api/v1/user/{id}",
-    "path_info":"Curabitur...", // optional
-    "parameters":[ // optional
+    "path_info":"Curabitur...",
+    "parameters":[
         ["{id}","4553356","Nulla nu..."],
         ["authorization","auth123token","Lorem..."],
         ["email","albert@gamil.com","Integer nec..."],
         ["active","true|false","Maecenas..."]
     ],
-    "header":{ // optional
+    "header":{
         "authorization": "auth123token"
     },
-    "body":{ // optional
+    "body":{
         "email":"albert@gamil.com",
         "active":true
     },
