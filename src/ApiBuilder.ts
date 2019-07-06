@@ -11,8 +11,16 @@ import RemoveFiles from './RemoveFiles';
 import CreatePublic from './CreatePublic';
 import CopyFiles from './CopyFiles';
 import chalk from 'chalk';
-
 class ApiBuilder {
+    files;
+    navbar;
+    constructor(){
+        this.init();
+    }
+    async init(){
+        this.files = await ReadJsonFiles.read('api');
+        this.navbar = await NavBarBuilder.create(this.files);
+    }
     static async run(){
         let files = await ReadJsonFiles.read('api');
         let navbar = await NavBarBuilder.create(files);
@@ -34,15 +42,20 @@ class ApiBuilder {
             $('#eppath').html(endpoint);
             $('#eppathinfo').html(filecontent.path_info);
 
-            let paramsTable = ParamTableBuilder.create(filecontent.parameters);
-            $('#epparams').html(paramsTable);
-
-            let header = CodeBuilder.create(filecontent.header);
-            $('#ephed').html(header);
-
+            if(filecontent.hasOwnProperty("parameters") === false || filecontent["parameters"] === undefined || filecontent["parameters"] === null) {
+                $('#epparams_').remove();
+            }else {
+                let paramsTable = ParamTableBuilder.create(filecontent.parameters);
+                $('#epparams').html(paramsTable);
+            }
+            if(filecontent.hasOwnProperty("header") === false || filecontent["header"] === undefined || filecontent["header"] === null) {
+                $('#ephed_').remove();
+            }else {
+                let header = CodeBuilder.create(filecontent.header);
+                $('#ephed').html(header);
+            }
             let body = CodeBuilder.create(filecontent.body);
             $('#epbdy').html(body);
-            
             let response = CodeBuilder.create(filecontent.response);
             $('#epres').html(response);
             
