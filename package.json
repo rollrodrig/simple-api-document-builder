@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/fs-promise": "^1.0.3",
+    "@types/sinon": "^7.0.13",
     "chalk": "^2.4.2",
     "cheerio": "^1.0.0-rc.3",
     "faker": "^4.1.0",
@@ -26,6 +27,7 @@
     "ncp": "^2.0.0",
     "prettify-json": "^1.0.0",
     "rimraf": "^2.6.3",
+    "sinon": "^7.3.2",
     "uuid": "^3.3.2"
   },
   "devDependencies": {

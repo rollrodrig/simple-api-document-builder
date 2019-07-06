@@ -94,6 +94,10 @@ class ApiBuilder {
     }
     async build(){
         let l = this.files.length;
+        if(l <= 0 || l === undefined || l === null) {
+            console.log(chalk.red(`No json files found on /api/ folder...`));
+            return;
+        }
         for (let i = 0; i < l; i++) {
             let currentFile = this.files[i];
             console.log(chalk.blue(`Building ${currentFile}...`));
