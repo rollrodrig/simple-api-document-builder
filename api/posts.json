@@ -1,10 +1,15 @@
 {
-    "title":"User Posts",
-    "description":"Aliquam ante magna, porta a lorem nec, tincidunt viverra justo. Cras quis libero sed nulla dapibus dictum. Duis id orci ullamcorper, molestie nibh vitae, mollis ligula. Quisque venenatis nec mauris eu vulputate. Mauris leo dolor, porttitor nec eros vel, pulvinar ullamcorper lorem.",
+    "title":"All Posts",
+    "description":"Aliquam vulputate sem ac lorem scelerisque porta at ut odio. Sed auctor metus in arcu mollis, sed pellentesque urna sodales. ",
     "method":"post",
-    "path":"/api/v1/user/{userid}/posts/",
-    "path_info":"Curabitur sit amet bibendum elit. Nunc ullamcorper auctor felis, vel pulvinar arcu",
+    "path":"/api/v1/posts/",
+    "path_info":"Suspendisse non aliquet est. Fusce at metus ipsum. Vivamus lobortis neque ",
     "parameters":[
+        {
+            "param":"authorization",
+            "example":"auth123token",
+            "description":"Nulla nunc lorem, auctor non "
+        },
         {
             "param":"userid",
             "example":"uuid123",
@@ -17,8 +22,7 @@
         }
     ],
     "header":{
-        "authorization": "auth123token",
-        "token": "tokenabc123"
+        "authorization": "auth123token"
     },
     "body":{
         "userid": "userid123",
@@ -39,6 +43,6 @@
     },
     "error":{
         "success": false,
-        "message": "user id not found"
+        "message": "SERVER ERROR MESSAGE"
     }
 }

@@ -17,21 +17,21 @@
                             FACTTORIAL
                         </div>
                     </div>
-                    <ul id="sbmen" class="fy-nv -h"><li><a href>Api</a></li><li><a href="posts.html">posts</a></li><li><a href="user.html">user</a></li><li><a href="users.html">users</a></li></ul>
+                    <ul id="sbmen" class="fy-nv -h"><li><a href>Api</a></li><li><a href="posts.html">posts</a></li><li><a href="user.html">user</a></li></ul>
                 </div>
             </div>
             <div class="fy-fxg ">
                 <div class="fy-bx">
-                    <h1 id="eptitle">User Posts</h1>
+                    <h1 id="eptitle">All Posts</h1>
                     <hr class="fy-hr">
-                    <div id="epdesc"><p>Aliquam ante magna, porta a lorem nec, tincidunt viverra justo. Cras quis libero sed nulla dapibus dictum. Duis id orci ullamcorper, molestie nibh vitae, mollis ligula. Quisque venenatis nec mauris eu vulputate. Mauris leo dolor, porttitor nec eros vel, pulvinar ullamcorper lorem.</p></div>
+                    <div id="epdesc"><p>Aliquam vulputate sem ac lorem scelerisque porta at ut odio. Sed auctor metus in arcu mollis, sed pellentesque urna sodales. </p></div>
                     <hr class="fy-hr">
-                    <h2 id="eppath"><span class="epm">post</span>&#xA0;&#xA0;<span class="ep">/api/v1/user/{userid}/posts/</span></h2>
-                    <p id="eppathinfo">Curabitur sit amet bibendum elit. Nunc ullamcorper auctor felis, vel pulvinar arcu</p>
+                    <h2 id="eppath"><span class="epm">post</span>&#xA0;&#xA0;<span class="ep">/api/v1/posts/</span></h2>
+                    <p id="eppathinfo">Suspendisse non aliquet est. Fusce at metus ipsum. Vivamus lobortis neque </p>
                     <hr class="fy-hr">
                     <div id="epparams_" class="fy-mb2">
                         <h3>
-                            Parementers
+                            Request parementers
                         </h3>
                         <div id="epparams">
             <table class="fy-tbl -s">
@@ -42,6 +42,12 @@
                     <th>Description</th>
                     </tr>
             
+                        <tr>
+                            <td>authorization</td>
+                            <td>auth123token</td>
+                            <td>Nulla nunc lorem, auctor non </td>
+                        </tr>
+                    
                         <tr>
                             <td>userid</td>
                             <td>uuid123</td>
@@ -60,19 +66,18 @@
                     </div>
                     <div id="ephed_" class="fy-mb2">
                         <h3>
-                            Header
+                            Request Header
                         </h3>
                         <div id="ephed">
         <pre><code class="json">
 {
-  authorization: &quot;auth123token&quot;,
-  token: &quot;tokenabc123&quot;
+  authorization: &quot;auth123token&quot;
 }
         </code></pre></div>
                     </div>
                     <div id="epbdy_" class="fy-mb2">
                         <h3>
-                            Body
+                            Request body
                         </h3>
                         <div id="epbdy">
         <pre><code class="json">

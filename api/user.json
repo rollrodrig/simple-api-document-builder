@@ -4,11 +4,29 @@
     "method":"get",
     "path":"/api/v1/user/{id}",
     "path_info":"Curabitur sit amet bibendum elit. Nunc ullamcorper auctor felis, vel pulvinar arcu",
-    "parameters":null,
+    "parameters":[
+        {
+            "param":"authorization",
+            "example":"auth123token",
+            "description":"Nulla nunc lorem, auctor non "
+        },
+        {
+            "param":"email",
+            "example":"albert@gamil.com",
+            "description":"Integer nec scelerisque lorem. Nulla nunc lorem, auctor non "
+        },
+        {
+            "param":"active",
+            "example":"true",
+            "description":"Maecenas fermentum turpis laoreet sem maximus venenatis. S"
+        }
+    ],
     "header":{
         "authorization": "auth123token"
     },
     "body":{
+        "email":"albert@gamil.com",
+        "active":true
     },
     "response":{
         "success": true,

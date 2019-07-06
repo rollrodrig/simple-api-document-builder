@@ -17,23 +17,21 @@
                             FACTTORIAL
                         </div>
                     </div>
-                    <ul id="sbmen" class="fy-nv -h"><li><a href>Api</a></li><li><a href="posts.html">posts</a></li><li><a href="user.html">user</a></li><li><a href="users.html">users</a></li></ul>
+                    <ul id="sbmen" class="fy-nv -h"><li><a href>Api</a></li><li><a href="posts.html">posts</a></li><li><a href="user.html">user</a></li></ul>
                 </div>
             </div>
             <div class="fy-fxg ">
                 <div class="fy-bx">
-                    <h1 id="eptitle">Get user data</h1>
+                    <h1 id="eptitle">User info</h1>
                     <hr class="fy-hr">
-                    <div id="epdesc"><p>Valet Mode limits the car&apos;s top speed to 70MPH and 80kW of acceleration power. It also disables Homelink, Bluetooth and Wifi settings, and the ability to disable mobile access to the car. It also hides your favorites, home, and work locations in navigation.</p></div>
+                    <div id="epdesc"><p>Etiam vel purus eget felis dapibus maximus a sit amet magna. In non lobortis lacus. Nullam faucibus lobortis tellus eu vehicula. Phasellus in velit vitae lectus imperdiet blandit a eu orci. </p></div>
                     <hr class="fy-hr">
-                    <h2 id="eppath"><span class="epm">post</span>&#xA0;&#xA0;<span class="ep">/api/v1/user/</span></h2>
-                    <p id="eppathinfo">
-                            Cras auctor sem in gravida mollis. Proin vitae finibus massa. Morbi rhoncus suscipit lacus, eu finibus lacus finibus vestibulum.
-                    </p>
+                    <h2 id="eppath"><span class="epm">get</span>&#xA0;&#xA0;<span class="ep">/api/v1/user/{id}</span></h2>
+                    <p id="eppathinfo">Curabitur sit amet bibendum elit. Nunc ullamcorper auctor felis, vel pulvinar arcu</p>
                     <hr class="fy-hr">
                     <div id="epparams_" class="fy-mb2">
                         <h3>
-                            Parementers
+                            Request parementers
                         </h3>
                         <div id="epparams">
             <table class="fy-tbl -s">
@@ -45,31 +43,47 @@
                     </tr>
             
                         <tr>
-                            <td>on</td>
-                            <td>true|false</td>
-                            <td>true to activate, false to deactivate. Must include previous PIN if deactivating.</td>
+                            <td>authorization</td>
+                            <td>auth123token</td>
+                            <td>Nulla nunc lorem, auctor non </td>
                         </tr>
                     
                         <tr>
-                            <td>on</td>
-                            <td>123</td>
-                            <td>true to activate, false to deactivate. Must include previous PIN if deactivating.</td>
+                            <td>email</td>
+                            <td>albert@gamil.com</td>
+                            <td>Integer nec scelerisque lorem. Nulla nunc lorem, auctor non </td>
+                        </tr>
+                    
+                        <tr>
+                            <td>active</td>
+                            <td>true</td>
+                            <td>Maecenas fermentum turpis laoreet sem maximus venenatis. S</td>
                         </tr>
                     
                 </tbody>
             </table>        
             </div>
                     </div>
-                    
+                    <div id="ephed_" class="fy-mb2">
+                        <h3>
+                            Request Header
+                        </h3>
+                        <div id="ephed">
+        <pre><code class="json">
+{
+  authorization: &quot;auth123token&quot;
+}
+        </code></pre></div>
+                    </div>
                     <div id="epbdy_" class="fy-mb2">
                         <h3>
-                            Body
+                            Request body
                         </h3>
                         <div id="epbdy">
         <pre><code class="json">
 {
-  on: true,
-  password: &quot;768655&quot;
+  email: &quot;albert@gamil.com&quot;,
+  active: true
 }
         </code></pre></div>
                     </div>
@@ -81,9 +95,12 @@
         <pre><code class="json">
 {
   success: true,
-  result: {
-    id: &quot;123&quot;,
-    name: &quot;roll&quot;
+  user: {
+    name: &quot;Albert&quot;,
+    email: &quot;albert@gamil.com&quot;,
+    phone: &quot;+51 1 568833002&quot;,
+    age: 23,
+    city: &quot;New York&quot;
   }
 }
         </code></pre></div>
