@@ -37,9 +37,5 @@
             "age":23,
             "city":"New York"
         }
-    },
-    "error":{
-        "success": false,
-        "message": "SERVER ERROR MESSAGE"
     }
 }

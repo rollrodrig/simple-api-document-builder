@@ -40,9 +40,5 @@
                 "title":"Nullam accumsan scelerisque risus sed varius."
             }
         ] 
-    },
-    "error":{
-        "success": false,
-        "message": "SERVER ERROR MESSAGE"
     }
 }
