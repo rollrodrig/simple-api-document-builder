@@ -22,13 +22,26 @@ const EndPointPath_1 = __importDefault(require("./EndPointPath"));
 const RemoveFiles_1 = __importDefault(require("./RemoveFiles"));
 const CopyFiles_1 = __importDefault(require("./CopyFiles"));
 const chalk_1 = __importDefault(require("chalk"));
+const CreateIndex_1 = __importDefault(require("./CreateIndex"));
+const FileInfo_1 = __importDefault(require("./FileInfo"));
+const IndexList_1 = __importDefault(require("./IndexList"));
+const IndexListWrapper_1 = __importDefault(require("./IndexListWrapper"));
 class ApiBuilder {
+    constructor() {
+        this.indexTableList = "";
+    }
     run() {
         return __awaiter(this, void 0, void 0, function* () {
+            yield this.readIndex();
             yield this.readFiles();
             yield this.createNavBar();
             yield this.folders();
             yield this.build();
+        });
+    }
+    readIndex() {
+        return __awaiter(this, void 0, void 0, function* () {
+            this._index_ = yield CreateIndex_1.default.create();
         });
     }
     readFiles() {
@@ -49,11 +62,11 @@ class ApiBuilder {
     }
     fileInfo(currentFile) {
         return __awaiter(this, void 0, void 0, function* () {
-            this.fileinfo = NavBarBuilder_1.default.cleanName(currentFile);
+            this.fileinfo = FileInfo_1.default.get(currentFile);
             this.filecontent = yield ReadJsonContent_1.default.read(`api/${currentFile}`);
         });
     }
-    creatHtml() {
+    creatApiView() {
         return __awaiter(this, void 0, void 0, function* () {
             yield CreateHtml_1.default.create(`public/${this.fileinfo.href}`, this._html_.html());
         });
@@ -101,6 +114,13 @@ class ApiBuilder {
         let response = CodeBuilder_1.default.create(this.filecontent.response);
         this._html_('#epres').html(response);
     }
+    htmlIndex() {
+        return __awaiter(this, void 0, void 0, function* () {
+            let indexTableListWrapped = IndexListWrapper_1.default.wrap(this.indexTableList);
+            this._index_('#apiroutes').html(indexTableListWrapped);
+            yield CreateHtml_1.default.create(`public/index.html`, this._index_.html());
+        });
+    }
     build() {
         return __awaiter(this, void 0, void 0, function* () {
             let l = this.files.length;
@@ -116,9 +136,11 @@ class ApiBuilder {
                 this.htmlHeader();
                 this.htmlBody();
                 this.htmlResponse();
-                yield this.creatHtml();
+                this.indexTableList += IndexList_1.default.add(this.fileinfo, this.filecontent);
+                yield this.creatApiView();
                 console.log(chalk_1.default.green(`Page ${this.fileinfo.href} created...`));
             }
+            this.htmlIndex();
         });
     }
 }

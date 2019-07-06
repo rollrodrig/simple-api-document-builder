@@ -1,34 +1,27 @@
 {
-    "title":"Get user data",
-    "description":"Valet Mode limits the car's top speed to 70MPH and 80kW of acceleration power. It also disables Homelink, Bluetooth and Wifi settings, and the ability to disable mobile access to the car. It also hides your favorites, home, and work locations in navigation.",
-    "method":"post",
-    "path":"/api/v1/user/",
-    "parameters":[
-        {
-            "param":"on",
-            "example":"true|false",
-            "description":"true to activate, false to deactivate. Must include previous PIN if deactivating."
-        },
-
-        {
-            "param":"on",
-            "example":"123",
-            "description":"true to activate, false to deactivate. Must include previous PIN if deactivating."
-        }
-    ],
+    "title":"User info",
+    "description":"Etiam vel purus eget felis dapibus maximus a sit amet magna. In non lobortis lacus. Nullam faucibus lobortis tellus eu vehicula. Phasellus in velit vitae lectus imperdiet blandit a eu orci. ",
+    "method":"get",
+    "path":"/api/v1/user/{id}",
+    "path_info":"Curabitur sit amet bibendum elit. Nunc ullamcorper auctor felis, vel pulvinar arcu",
+    "parameters":null,
+    "header":{
+        "authorization": "auth123token"
+    },
     "body":{
-        "on": true,
-        "password": "768655"
     },
     "response":{
         "success": true,
-        "result": {
-            "id":"123",
-            "name":"roll"
+        "user": {
+            "name":"Albert",
+            "email":"albert@gamil.com",
+            "phone":"+51 1 568833002",
+            "age":23,
+            "city":"New York"
         }
     },
     "error":{
         "success": false,
-        "message": "user id not found"
+        "message": "SERVER ERROR MESSAGE"
     }
 }
