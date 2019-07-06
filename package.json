@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
+    "build": "node dist/index.js",
+    "tsbuild": "ts-node src/index.ts",
     "mocha": "mocha  --watch --watch-extensions ts --require ts-node/register \"./src/**/*.spec.ts\"",
     "mochaf": "mocha  --watch --watch-extensions ts --require ts-node/register \"./src/${FILE}.spec.ts\""
   },
@@ -14,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/fs-promise": "^1.0.3",
+    "chalk": "^2.4.2",
     "cheerio": "^1.0.0-rc.3",
     "faker": "^4.1.0",
     "fs-extra": "^8.1.0",

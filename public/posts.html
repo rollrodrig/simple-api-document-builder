@@ -1,0 +1,106 @@
+<html><head>
+        <link rel="stylesheet" href="static/css/fly.css">
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="stylesheet" href="static/css/atom-one-light.css">
+    </head>
+    <body>
+        <div class="fy-fx">
+            <div class="fy-fx2 sdbar">
+                <div class="fy-bx">
+                    <div class="fy-mb5 fy-txac">
+                        <div id="doctitle">
+                            Document v1.0
+                        </div>
+                        <div id="company" class="fy-txs">
+                            FACTTORIAL
+                        </div>
+                    </div>
+                    <ul id="sbmen" class="fy-nv -h"><li><a href>Api</a></li><li><a href="posts.html">posts</a></li><li><a href="user.html">user</a></li><li><a href="users.html">users</a></li></ul>
+                </div>
+            </div>
+            <div class="fy-fxg ">
+                <div class="fy-bx">
+                    <h1 id="eptitle">User Posts</h1>
+                    <hr class="fy-hr">
+                    <div id="epdesc"><p>Aliquam ante magna, porta a lorem nec, tincidunt viverra justo. Cras quis libero sed nulla dapibus dictum. Duis id orci ullamcorper, molestie nibh vitae, mollis ligula. Quisque venenatis nec mauris eu vulputate. Mauris leo dolor, porttitor nec eros vel, pulvinar ullamcorper lorem.</p></div>
+                    <hr class="fy-hr">
+                    <h2 id="eppath"><span class="epm">post</span>&#xA0;&#xA0;<span class="ep">/api/v1/user/{userid}/posts/</span></h2>
+                    <p id="eppathinfo">Curabitur sit amet bibendum elit. Nunc ullamcorper auctor felis, vel pulvinar arcu</p>
+                    <div class="fy-mb2">
+                        <h3>
+                            Parementers
+                        </h3>
+                        <div id="epparams">
+            <table class="fy-tbl -s">
+                <tbody>
+                    <tr>
+                    <th>Paramenters</th>
+                    <th>Example</th>
+                    <th>Description</th>
+                    </tr>
+            
+                        <tr>
+                            <td>userid</td>
+                            <td>uuid123</td>
+                            <td>Integer nec scelerisque lorem. Nulla nunc lorem, auctor non </td>
+                        </tr>
+                    
+                        <tr>
+                            <td>qty</td>
+                            <td>2</td>
+                            <td>Maecenas fermentum turpis laoreet sem maximus venenatis. S</td>
+                        </tr>
+                    
+                </tbody>
+            </table>        
+            </div>
+                    </div>
+                    <div class="fy-mb2">
+                        <h3>
+                            Header
+                        </h3>
+                        <div id="ephed">
+        <pre><code class="json">
+{
+  authorization: &quot;auth123token&quot;,
+  token: &quot;tokenabc123&quot;
+}
+        </code></pre></div>
+                    </div>
+                    <div class="fy-mb2">
+                        <h3>
+                            Body
+                        </h3>
+                        <div id="epbdy">
+        <pre><code class="json">
+{
+  userid: &quot;userid123&quot;,
+  qty: 2
+}
+        </code></pre></div>
+                    </div>
+                    <div class="fy-mb2">
+                            <h3>
+                                Response
+                            </h3>
+                        <div id="epres">
+        <pre><code class="json">
+{
+  success: true,
+  data: [{
+    id: &quot;posid123&quot;,
+    title: &quot;Proin pellentesque velit nulla. Curabitur consequat diam vel&quot;
+  }, {
+    id: &quot;posid123&quot;,
+    title: &quot;Nullam accumsan scelerisque risus sed varius.&quot;
+  }]
+}
+        </code></pre></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="static/js/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+</body></html>

@@ -1,5 +1,4 @@
 import fs from 'fs';
-import cheerio from 'cheerio';
 import ReadJsonFiles from './ReadJsonFiles';
 import ReadJsonContent, { TJsonContent } from './ReadJsonContent';
 import HtmlTemplate from './HtmlTemplate';
@@ -11,15 +10,17 @@ import EndPointPath from './EndPointPath';
 import RemoveFiles from './RemoveFiles';
 import CreatePublic from './CreatePublic';
 import CopyFiles from './CopyFiles';
+import chalk from 'chalk';
+
 class ApiBuilder {
     static async run(){
         let files = await ReadJsonFiles.read('api');
         let navbar = await NavBarBuilder.create(files);
         await RemoveFiles.remove();
-        await CreatePublic.create();
         await CopyFiles.copy();
         for (let i = 0; i < files.length; i++) {
             let currentFile = files[i];
+            console.log(chalk.blue(`Building ${currentFile}...`));
             let fileinfo = NavBarBuilder.cleanName(currentFile);
             let filecontent: TJsonContent = await ReadJsonContent.read(`api/${currentFile}`);
             
@@ -46,6 +47,7 @@ class ApiBuilder {
             $('#epres').html(response);
             
             await CreateHtml.create(`public/${fileinfo.href}`, $.html());
+            console.log(chalk.green(`Page ${fileinfo.href} created...`));
         }
     }
 }
