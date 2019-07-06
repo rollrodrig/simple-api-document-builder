@@ -1,4 +1,3 @@
-import fs from 'fs';
 import ReadJsonFiles from './ReadJsonFiles';
 import ReadJsonContent, { TJsonContent } from './ReadJsonContent';
 import HtmlTemplate from './HtmlTemplate';
@@ -21,6 +20,7 @@ class ApiBuilder {
     filecontent: TJsonContent;
     _index_;
     _html_;
+    indexTableList: string = "";
     async run(){
         await this.readIndex();
         await this.readFiles();
@@ -45,7 +45,7 @@ class ApiBuilder {
         this.fileinfo = FileInfo.get(currentFile);
         this.filecontent = await ReadJsonContent.read(`api/${currentFile}`);
     }
-    async creatHtml(){
+    async creatApiView(){
         await CreateHtml.create(`public/${this.fileinfo.href}`, this._html_.html());
     }
     async creteTemplate(){
@@ -87,7 +87,11 @@ class ApiBuilder {
         let response = CodeBuilder.create(this.filecontent.response);
         this._html_('#epres').html(response);
     }
-    indexTableList: string = "";
+    async htmlIndex(){
+        let indexTableListWrapped = IndexListWrapper.wrap(this.indexTableList);
+        this._index_('#apiroutes').html(indexTableListWrapped);
+        await CreateHtml.create(`public/index.html`, this._index_.html());
+    }
     async build(){
         let l = this.files.length;
         for (let i = 0; i < l; i++) {
@@ -103,12 +107,10 @@ class ApiBuilder {
             this.htmlBody();
             this.htmlResponse();
             this.indexTableList += IndexList.add(this.fileinfo, this.filecontent);
-            await this.creatHtml();
+            await this.creatApiView();
             console.log(chalk.green(`Page ${this.fileinfo.href} created...`));
         }
-        let indexTableListWrapped = IndexListWrapper.wrap(this.indexTableList);
-        this._index_('#apiroutes').html(indexTableListWrapped);
-        await CreateHtml.create(`public/index.html`, this._index_.html());
+        this.htmlIndex();
     }
 }
 export default ApiBuilder;
