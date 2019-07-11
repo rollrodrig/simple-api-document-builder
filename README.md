@@ -42,7 +42,10 @@ Run the command
 ```npm
 npm run build
 ```
-and open the folder `public`, the `user.html` will be created.
+And open the folder `public`, the `user.html` will be created. 
+
+Here is an [example](https://rollrodrig.github.io/simple-api-document-builder/index.html)
+
 
 ![Html generated screenshot example](example_user.png?raw=true "Html generated screenshot example")
 
