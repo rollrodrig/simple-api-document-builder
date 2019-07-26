@@ -1,7 +1,7 @@
 {
     "title":"User info",
     "description":"Etiam vel purus eget felis dapibus maximus a sit amet magna. In non lobortis lacus. Nullam faucibus lobortis tellus eu vehicula. Phasellus in velit vitae lectus imperdiet blandit a eu orci. ",
-    "method":"get",
+    "method":"post",
     "path":"/api/v1/user/{id}",
     "path_info":"Curabitur sit amet bibendum elit. Nunc ullamcorper auctor felis, vel pulvinar arcu",
     "parameters":[

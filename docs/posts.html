@@ -19,12 +19,12 @@
             </div>
             <div class="fy-fxg ">
                 <div class="fy-bx">
-                    <h1 id="eptitle">User info</h1>
+                    <h1 id="eptitle">All Posts</h1>
                     <hr class="fy-hr">
-                    <div id="epdesc"><p>Etiam vel purus eget felis dapibus maximus a sit amet magna. In non lobortis lacus. Nullam faucibus lobortis tellus eu vehicula. Phasellus in velit vitae lectus imperdiet blandit a eu orci. </p></div>
+                    <div id="epdesc"><p>Aliquam vulputate sem ac lorem scelerisque porta at ut odio. Sed auctor metus in arcu mollis, sed pellentesque urna sodales. </p></div>
                     <hr class="fy-hr">
-                    <h2 id="eppath"><span class="epm">post</span>&#xA0;&#xA0;<span class="ep">/api/v1/user/{id}</span></h2>
-                    <p id="eppathinfo">Curabitur sit amet bibendum elit. Nunc ullamcorper auctor felis, vel pulvinar arcu</p>
+                    <h2 id="eppath"><span class="epm">post</span>&#xA0;&#xA0;<span class="ep">/api/v1/posts/</span></h2>
+                    <p id="eppathinfo">Suspendisse non aliquet est. Fusce at metus ipsum. Vivamus lobortis neque </p>
                     <hr class="fy-hr">
                     <div id="epparams_" class="fy-mb2">
                         <h3>
@@ -40,27 +40,21 @@
                     </tr>
             
                         <tr>
-                            <td><code>{id}</code></td>
-                            <td><code>4553356</code></td>
-                            <td>Nulla nunc lorem, auctor non</td>
-                        </tr>
-                    
-                        <tr>
                             <td><code>authorization</code></td>
                             <td><code>auth123token</code></td>
                             <td>Nulla nunc lorem, auctor non</td>
                         </tr>
                     
                         <tr>
-                            <td><code>email</code></td>
-                            <td><code>albert@gamil.com</code></td>
+                            <td><code>userid</code></td>
+                            <td><code>uuid123</code></td>
                             <td>Integer nec scelerisque lorem. Nulla nunc lorem, auctor non</td>
                         </tr>
                     
                         <tr>
-                            <td><code>active</code></td>
-                            <td><code>true|false</code></td>
-                            <td>Maecenas fermentum turpis laoreet sem maximus venenatis.</td>
+                            <td><code>qty</code></td>
+                            <td><code>2|all</code></td>
+                            <td>Maecenas fermentum turpis laoreet sem maximus venenatis. S</td>
                         </tr>
                     
                 </tbody>
@@ -85,8 +79,8 @@
                         <div id="epbdy">
         <pre><code class="json">
 {
-  email: &quot;albert@gamil.com&quot;,
-  active: true
+  userid: &quot;userid123&quot;,
+  qty: 2
 }
         </code></pre></div>
                     </div>
@@ -98,13 +92,13 @@
         <pre><code class="json">
 {
   success: true,
-  user: {
-    name: &quot;Albert&quot;,
-    email: &quot;albert@gamil.com&quot;,
-    phone: &quot;+51 1 568833002&quot;,
-    age: 23,
-    city: &quot;New York&quot;
-  }
+  data: [{
+    id: &quot;posid123&quot;,
+    title: &quot;Proin pellentesque velit nulla. Curabitur consequat diam vel&quot;
+  }, {
+    id: &quot;posid123&quot;,
+    title: &quot;Nullam accumsan scelerisque risus sed varius.&quot;
+  }]
 }
         </code></pre></div>
                     </div>

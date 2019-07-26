@@ -6,21 +6,21 @@ Document your API in a simple way.
 Create a `user.json` file in the folder `/api/` with the following structure
 ```json
 {
-    "title":"Get User",
-    "description":"Etiam vel...", // optional
-    "method":"get",
+    "title":"User info",
+    "description":"Etiam vel...",
+    "method":"post",
     "path":"/api/v1/user/{id}",
-    "path_info":"Curabitur...", // optional
-    "parameters":[ // optional
+    "path_info":"Curabitur...",
+    "parameters":[
         ["{id}","4553356","Nulla nu..."],
         ["authorization","auth123token","Lorem..."],
         ["email","albert@gamil.com","Integer nec..."],
         ["active","true|false","Maecenas..."]
     ],
-    "header":{ // optional
+    "header":{
         "authorization": "auth123token"
     },
-    "body":{ // optional
+    "body":{
         "email":"albert@gamil.com",
         "active":true
     },
@@ -42,7 +42,12 @@ Run the command
 ```npm
 npm run build
 ```
-and open the folder `public`, the `user.html` will be created.
+And open the folder `public`, the `user.html` will be created. 
+
+Here is an [example](https://rollrodrig.github.io/simple-api-document-builder/index.html)
+
+
+![Html generated screenshot example](example_user.png?raw=true "Html generated screenshot example")
 
 ## 3. Open on browser
 The genered result is pure html files, just open it on browser or public it on S3 for your team.
