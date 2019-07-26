@@ -13,15 +13,3 @@ class HtmlTemplate {
     }
 }
 export default HtmlTemplate;
-
-
-
-
-        // fs.readFile('public/__example.html','utf8', (err, data) => {
-        //     if (err) throw err;
-        //     const $ = cheerio.load(data)
-        //     $('#api_title').text('Hello there');
-        //     fs.writeFile('public/example.html', $.html(), 'utf8', (err)=>{
-        //         if (err) throw err;
-        //     });
-        // });

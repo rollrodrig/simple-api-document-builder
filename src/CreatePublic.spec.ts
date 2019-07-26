@@ -4,7 +4,7 @@ import CreatePublic from './CreatePublic';
 describe('CreatePublic: ', () => {
 	it('create', async () => {
         // await CreatePublic.create();
-        // console.log("public/ creates");
+        // console.log("docs/ creates");
     });
 });
 

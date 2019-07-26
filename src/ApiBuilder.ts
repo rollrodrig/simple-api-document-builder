@@ -49,7 +49,7 @@ class ApiBuilder {
         this.filecontent = await ReadJsonContent.read(`api/${currentFile}`);
     }
     async creatApiView(){
-        await CreateHtml.create(`public/${this.fileinfo.href}`, this._html_.html());
+        await CreateHtml.create(`docs/${this.fileinfo.href}`, this._html_.html());
     }
     async creteTemplate(){
         this._html_ = await HtmlTemplate.create();
@@ -93,7 +93,7 @@ class ApiBuilder {
     async htmlIndex(){
         let indexTableListWrapped = IndexListWrapper.wrap(this.indexTableList);
         this._index_('#apiroutes').html(indexTableListWrapped);
-        await CreateHtml.create(`public/index.html`, this._index_.html());
+        await CreateHtml.create(`docs/index.html`, this._index_.html());
     }
     async build(){
         let l = this.files.length;

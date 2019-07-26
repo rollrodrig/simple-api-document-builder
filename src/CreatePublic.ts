@@ -2,9 +2,9 @@ import fs from 'fs';
 class CreatePublic {
     static create(){
         new Promise((resolve, reject) =>{
-            fs.mkdir('public',(err)=>{
+            fs.mkdir('docs',(err)=>{
                 if(err) throw err;
-                fs.mkdir('public/static',(err)=>{
+                fs.mkdir('docs/static',(err)=>{
                     resolve();
                 })
             })
