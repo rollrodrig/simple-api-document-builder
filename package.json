@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
-    "build": "node dist/index.js",
-    "tsbuild": "ts-node src/index.ts",
+    "build": "ts-node src/index.ts",
     "mocha": "mocha  --watch --watch-extensions ts --require ts-node/register \"./src/**/*.spec.ts\"",
     "mochaf": "mocha  --watch --watch-extensions ts --require ts-node/register \"./src/${FILE}.spec.ts\""
   },
